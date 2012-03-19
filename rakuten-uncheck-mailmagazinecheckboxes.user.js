@@ -2,7 +2,7 @@
 // @name            Rakuten: Uncheck "want mail magazines" checkboxes by default
 // @namespace       http://www.sfo.jp/
 // @description     Uncheck "want mail magazines" checkboxes in Rakuten ordering page
-// @include         https://*.rakuten.co.jp/*
+// @include         https://*.step.rakuten.co.jp/*
 // ==/UserScript==
 
 // Copyright (c) 2007-2009 SATOH Fumiyasu @ OSS Technology, Inc.
