@@ -2,9 +2,7 @@
 // @name            Rakuten: Uncheck "want mail magazines" checkboxes by default
 // @namespace       http://www.sfo.jp/
 // @description     Uncheck "want mail magazines" checkboxes in Rakuten ordering page
-// @include         https://order.step.rakuten.co.jp/*
-// @include         https://*.order.step.rakuten.co.jp/*
-// @include         https://present.step.rakuten.co.jp/*
+// @include         https://*.rakuten.co.jp/*
 // ==/UserScript==
 
 // Copyright (c) 2007-2009 SATOH Fumiyasu @ OSS Technology, Inc.
@@ -25,7 +23,7 @@
 	if (!name || !type || type != "checkbox") {
 	  continue;
 	}
-	if (name == "rmail_check" || name == "shop_rating_check" || name.match(/^newscheck_[0-9]+$/)) {
+	if (name == "rmail_check" || name == "shop_rating_check" || name == "newsId") {
 	  //input[i].setAttribute("checked", false);
 	  input[i].checked = false;
 	}
