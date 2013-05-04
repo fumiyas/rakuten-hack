@@ -5,8 +5,9 @@
 // @include         https://*.step.rakuten.co.jp/*
 // ==/UserScript==
 
-// Copyright (c) 2007-2009 SATOH Fumiyasu @ OSS Technology, Inc.
-//               <http://www.osstech.co.jp/>
+// Copyright (c) 2007-2013 SATOH Fumiyasu @ OSS Technology Corp., Japan
+//               <https://GitHub.com/fumiyas/>
+//               <http://www.OSSTech.co.jp/>
 //
 // License: GNU General Public License version 2
 // Date: 2012-01-07, since 2007-01-06
@@ -23,7 +24,7 @@
 	if (!name || !type || type != "checkbox") {
 	  continue;
 	}
-	if (name == "rmail_check" || name == "shop_rating_check" || name == "newsId") {
+	if (name == "rmail_check" || name == "shop_rating_check" || name == "newsId" || name == "bookmark_check") {
 	  //input[i].setAttribute("checked", false);
 	  input[i].checked = false;
 	}
