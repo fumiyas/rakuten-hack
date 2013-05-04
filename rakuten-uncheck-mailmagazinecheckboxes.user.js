@@ -3,6 +3,7 @@
 // @namespace       http://www.sfo.jp/
 // @description     Uncheck "want mail magazines" checkboxes in Rakuten ordering page
 // @include         https://*.step.rakuten.co.jp/*
+// @grant           none
 // ==/UserScript==
 
 // Copyright (c) 2007-2013 SATOH Fumiyasu @ OSS Technology Corp., Japan
