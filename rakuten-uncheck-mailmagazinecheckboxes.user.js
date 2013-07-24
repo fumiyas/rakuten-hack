@@ -3,7 +3,8 @@
 // @namespace       http://www.sfo.jp/
 // @description     Uncheck "want mail magazines" checkboxes in Rakuten ordering page
 // @include         https://*.step.rakuten.co.jp/*
-// @grant           none
+// @include         https://*.travel.rakuten.co.jp/*
+// @grant	    none
 // ==/UserScript==
 
 // Copyright (c) 2007-2013 SATOH Fumiyasu @ OSS Technology Corp., Japan
@@ -11,7 +12,7 @@
 //               <http://www.OSSTech.co.jp/>
 //
 // License: GNU General Public License version 2
-// Date: 2012-01-07, since 2007-01-06
+// Date: 2013-07-24, since 2007-01-06
 
 (function() {
   var RakutenUncheckMailMagazinesCheckBoxes =
@@ -25,7 +26,7 @@
 	if (!name || !type || type != "checkbox") {
 	  continue;
 	}
-	if (name == "rmail_check" || name == "shop_rating_check" || name == "newsId" || name == "bookmark_check") {
+	if (name == "rmail_check" || name == "shop_rating_check" || name == "newsId" || name == "bookmark_check" || name.lastIndexOf("f_rmail_", 0) == 0) {
 	  //input[i].setAttribute("checked", false);
 	  input[i].checked = false;
 	}
