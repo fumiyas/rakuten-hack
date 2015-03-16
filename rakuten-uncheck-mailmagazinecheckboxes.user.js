@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name            Rakuten: Uncheck "want mail magazines" checkboxes by default
-// @namespace       http://fumiyas.github.io/
+// @namespace       https://fumiyas.github.io/
 // @description     Uncheck "want mail magazines" checkboxes in Rakuten ordering page
 // @include         https://*.step.rakuten.co.jp/*
 // @include         https://*.travel.rakuten.co.jp/*
 // @include         https://*.checkout.rakuten.co.jp/*
+// @include         https://www.rakuten-card.co.jp/*
 // @grant	    none
 // ==/UserScript==
 
-// Copyright (c) 2007-2013 SATOH Fumiyasu @ OSS Technology Corp., Japan
+// Copyright (c) 2007-2015 SATOH Fumiyasu @ OSS Technology Corp., Japan
 //               <https://GitHub.com/fumiyas/rakuten-hack>
 //               <http://www.OSSTech.co.jp/>
 //
@@ -32,9 +33,11 @@
 	    name == "newsId" ||
 	    name == "shopMail" ||
 	    name == "coutMail" ||
+	    name == "entryForm:mailMagazine" ||
+	    name == "bookmark_check" ||
+	    id.lastIndexOf("newscheck_", 0) == 0 ||
 	    id.lastIndexOf("mailMgz", 0) == 0 ||
-	    id.lastIndexOf("mailNws", 0) == 0 ||
-	    name == "bookmark_check") {
+	    id.lastIndexOf("mailNws", 0)) {
 	  //input[i].setAttribute("checked", false);
 	  input[i].checked = false;
 	}
