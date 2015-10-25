@@ -5,6 +5,7 @@
 // @include         https://*.step.rakuten.co.jp/*
 // @include         https://*.travel.rakuten.co.jp/*
 // @include         https://*.checkout.rakuten.co.jp/*
+// @include         http://auction.rakuten.co.jp/item/*
 // @include         http://event.rakuten.co.jp/*
 // @include         https://www.rakuten-card.co.jp/*
 // @grant	    none
@@ -37,6 +38,7 @@
 	    name == "coutMail" ||
 	    name == "entryForm:mailMagazine" ||
 	    name == "bookmark_check" ||
+	    name.lastIndexOf("news_check_", 0) == 0 ||
 	    value == "mail_on" ||
 	    id.lastIndexOf("newscheck_", 0) == 0 ||
 	    id.lastIndexOf("mailMgz", 0) == 0 ||
