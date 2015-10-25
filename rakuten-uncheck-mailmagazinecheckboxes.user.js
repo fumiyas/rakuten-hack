@@ -5,6 +5,7 @@
 // @include         https://*.step.rakuten.co.jp/*
 // @include         https://*.travel.rakuten.co.jp/*
 // @include         https://*.checkout.rakuten.co.jp/*
+// @include         http://event.rakuten.co.jp/*
 // @include         https://www.rakuten-card.co.jp/*
 // @grant	    none
 // ==/UserScript==
@@ -23,6 +24,7 @@
       var input = document.getElementsByTagName( "input" );
       for (var i = 0; i < input.length; i++) {
 	name = input[i].getAttribute("name");
+	value = input[i].getAttribute("value");
 	id = input[i].getAttribute("id");
 	type = input[i].getAttribute("type");
 	if (!name || !type || type != "checkbox") {
@@ -35,9 +37,10 @@
 	    name == "coutMail" ||
 	    name == "entryForm:mailMagazine" ||
 	    name == "bookmark_check" ||
+	    value == "mail_on" ||
 	    id.lastIndexOf("newscheck_", 0) == 0 ||
 	    id.lastIndexOf("mailMgz", 0) == 0 ||
-	    id.lastIndexOf("mailNws", 0)) {
+	    id.lastIndexOf("mailNws", 0) == 0) {
 	  //input[i].setAttribute("checked", false);
 	  input[i].checked = false;
 	}
